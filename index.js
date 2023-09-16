@@ -9,7 +9,7 @@ const app = express();
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(`mongodb+srv://Abinash:${process.env.PASS}@cluster0.usfgje8.mongodb.net/authors?retryWrites=true&w=majority`);
+  await mongoose.connect(`mongodb+srv://Abinash:${process.env.PASS}@cluster0.usfgje8.mongodb.net/?retryWrites=true&w=majority`);
   console.log('Successfully connected with database');
 }
 app.use(express.json());
